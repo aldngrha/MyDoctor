@@ -1,13 +1,8 @@
-import {StyleSheet, Text, View} from 'react-native';
+import React from 'react';
+import {Splash} from './screens';
 
 const App = () => {
-  return (
-    <View>
-      <Text>Hello World!</Text>
-    </View>
-  );
+  return <Splash />;
 };
-
-const styles = StyleSheet.create({});
 
 export default App;
