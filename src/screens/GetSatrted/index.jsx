@@ -1,8 +1,7 @@
 import {ImageBackground, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {ILGetStarted, ILLogo} from '../../assets';
-import {Button} from '../../components';
-import Gap from '../../components/atoms/Gap';
+import {Button, Gap} from '../../components';
 
 const GetStarted = ({navigation}) => {
   return (
@@ -42,5 +41,6 @@ const styles = StyleSheet.create({
     color: 'white',
     marginTop: 91,
     fontFamily: 'Nunito-SemiBold',
+    maxWidth: 255,
   },
 });
