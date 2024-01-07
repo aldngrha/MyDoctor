@@ -2,6 +2,7 @@ import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {ILLogo} from '../../assets';
 import {Button, Gap, Input, Link} from '../../components';
+import {colors, fonts} from '../../utils';
 
 const Login = () => {
   return (
@@ -27,12 +28,12 @@ const styles = StyleSheet.create({
   screen: {
     flex: 1,
     padding: 40,
-    backgroundColor: 'white',
+    backgroundColor: colors.white,
   },
   title: {
-    fontFamily: 'Nunito-SemiBold',
+    fontFamily: fonts.primary[600],
     fontSize: 20,
-    color: '#112340',
+    color: colors.text.primary,
     marginVertical: 40,
     maxWidth: 153,
   },
