@@ -5,6 +5,7 @@ import ILGeneralDoctor from './doctor-general.svg';
 import ILPsychiatrist from './psikiater.svg';
 import ILMedicineDoctor from './medicine.svg';
 import ILPediatrician from './child.svg';
+import ILHospital from './hospital.png';
 
 export {
   ILLogo,
@@ -14,4 +15,5 @@ export {
   ILPsychiatrist,
   ILMedicineDoctor,
   ILPediatrician,
+  ILHospital,
 };
