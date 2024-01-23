@@ -1,19 +1,18 @@
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
-import {DummyDoctor2} from '../../../assets';
+import {DummyDoctor2, IconNext} from '../../../assets';
 import {colors, fonts} from '../../../utils';
 
-const ListDoctors = () => {
+const ListDoctors = ({profile, name, desc, type, onPress}) => {
   return (
-    <View style={styles.container}>
-      <Image source={DummyDoctor2} style={styles.avatar} />
-      <View>
-        <Text style={styles.name}>Alexander Jannie</Text>
-        <Text style={styles.desc}>
-          Baik ibu, terima kasih banyak atas wakt...
-        </Text>
+    <TouchableOpacity style={styles.container} onPress={onPress}>
+      <Image source={profile} style={styles.avatar} />
+      <View style={styles.content}>
+        <Text style={styles.name}>{name}</Text>
+        <Text style={styles.desc}>{desc}</Text>
       </View>
-    </View>
+      {type === 'next' && <IconNext />}
+    </TouchableOpacity>
   );
 };
 
@@ -26,6 +25,10 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: colors.border,
     alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  content: {
+    flex: 1,
   },
   avatar: {
     width: 46,
