@@ -10,6 +10,8 @@ import IconHospitals from './ic-hospital.svg';
 import IconHospitalsActive from './ic-hospital-active.svg';
 import IconStar from './ic-star.svg';
 import IconNext from './ic-arrow.svg';
+import IconSend from './ic-send.svg';
+import IconSendDisable from './ic-send-disabled.svg';
 
 export {
   IconBackDark,
@@ -24,4 +26,6 @@ export {
   IconMessagesActive,
   IconStar,
   IconNext,
+  IconSend,
+  IconSendDisable,
 };
