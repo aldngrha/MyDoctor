@@ -1,12 +1,35 @@
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
-import {DummyDoctor2, IconNext} from '../../../assets';
+import {
+  DummyDoctor2,
+  IconEditProfile,
+  IconHelp,
+  IconLanguage,
+  IconNext,
+  IconRate,
+} from '../../../assets';
 import {colors, fonts} from '../../../utils';
 
-const ListDoctors = ({profile, name, desc, type, onPress}) => {
+const ListDoctors = ({profile, name, desc, type, onPress, icon}) => {
+  const Icon = () => {
+    if (icon === 'edit-profile') {
+      return <IconEditProfile />;
+    }
+    if (icon === 'language') {
+      return <IconLanguage />;
+    }
+    if (icon === 'rate') {
+      return <IconRate />;
+    }
+    if (icon === 'help') {
+      return <IconHelp />;
+    }
+
+    return <IconEditProfile />;
+  };
   return (
     <TouchableOpacity style={styles.container} onPress={onPress}>
-      <Image source={profile} style={styles.avatar} />
+      {icon ? <Icon /> : <Image source={profile} style={styles.avatar} />}
       <View style={styles.content}>
         <Text style={styles.name}>{name}</Text>
         <Text style={styles.desc}>{desc}</Text>
@@ -29,12 +52,12 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
+    marginLeft: 16,
   },
   avatar: {
     width: 46,
     height: 46,
     borderRadius: 46 / 2,
-    marginRight: 12,
   },
   name: {
     fontSize: 16,

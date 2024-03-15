@@ -1,6 +1,6 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React, {useState} from 'react';
-import {Gap, Header, ListDoctors} from '../../components';
+import {Gap, Header, List} from '../../components';
 import {
   DummyDoctor3,
   DummyDoctor4,
@@ -53,7 +53,7 @@ const ChooseDoctor = ({navigation}) => {
       <Gap height={4} />
       {doctors.map(doctor => {
         return (
-          <ListDoctors
+          <List
             key={doctor.id}
             type="next"
             profile={doctor.profile}
