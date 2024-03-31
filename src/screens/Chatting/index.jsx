@@ -4,10 +4,14 @@ import {ChatItem, Header} from '../../components';
 import InputChat from '../../components/molecules/InputChat';
 import {colors, fonts} from '../../utils';
 
-const Chatting = () => {
+const Chatting = ({navigation}) => {
   return (
     <View style={styles.screen}>
-      <Header type="dark-profile" title="Nairobi Putri Hayza" />
+      <Header
+        type="dark-profile"
+        title="Nairobi Putri Hayza"
+        onPress={() => navigation.goBack()}
+      />
       <View style={styles.content}>
         <Text style={styles.chatDate}>Senin, 03 Maret 2024</Text>
         <ChatItem isMeBubble />
@@ -27,7 +31,7 @@ const styles = StyleSheet.create({
   chatDate: {
     fontSize: 11,
     fontFamily: fonts.primary.normal,
-    colors: colors.text.secondary,
+    color: colors.text.secondary,
     marginVertical: 20,
     textAlign: 'center',
   },
