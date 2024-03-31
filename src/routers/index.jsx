@@ -11,6 +11,7 @@ import {
   Messages,
   Register,
   Splash,
+  UpdateProfile,
   UploadPhoto,
   UserProfile,
 } from '../screens';
@@ -87,6 +88,11 @@ const Router = () => {
       <Stack.Screen
         name="UserProfile"
         component={UserProfile}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="UpdateProfile"
+        component={UpdateProfile}
         options={{headerShown: false}}
       />
     </Stack.Navigator>
