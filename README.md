@@ -15,7 +15,7 @@ A React Native app engineered for seamless healthcare access — powered by Fire
 ### Setup & Run
 
 ```bash
-git clone <repo-url>
+git clone git@github.com:aldngrha/MyDoctor.git
 cd MyDoctor
 yarn install
 yarn android    # Android device/emulator
